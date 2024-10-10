@@ -14,7 +14,6 @@ public class Produto {
 	Produto(){
 
 	}
-
 	public Produto(long id, String nome){
 		this.id = id;
 		this.nome = nome;
@@ -32,7 +31,8 @@ public class Produto {
 	private String categoria;
 	private String destaque;
 	private String statusProd;
-	
+
+
 	// CRIAR GETTERS E SETTERS
 	public long getId() {
 		return id;
