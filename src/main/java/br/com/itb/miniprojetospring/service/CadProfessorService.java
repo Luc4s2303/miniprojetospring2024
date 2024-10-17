@@ -35,7 +35,7 @@ public class CadProfessorService {
         if(cadProfessorEncontrado.getId() > 0)
             return cadProfessorRepository.save(cadProfessorEncontrado);
         else
-            return new CadProfessor(0, "Cadastro não encontrado");
+            return new CadProfessor(0L, "Cadastro não encontrado");
     }
 
     @Transactional

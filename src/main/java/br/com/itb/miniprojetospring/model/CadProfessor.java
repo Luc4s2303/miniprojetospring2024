@@ -10,25 +10,48 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="CadProfessor")
-
 public class CadProfessor {
-    CadProfessor() {
-    }
-        public CadProfessor(long id, String Nome){
-            this.id = id;
-            this.Nome = Nome;
-        }
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
 
-        private String Nome;
-        private String Email;
-        private String Senha;
-        private byte[] Certificado;
-        private String Endereco;
-        private String CPF;
+        private String nome;
+        private String email;
+        private String senha;
+        private byte[] certificado;
+        private String endereco;
+        private String cpf;
         private String statusProf;
+
+    public CadProfessor(Long id, String nome, String email, String senha, byte[] certificado, String endereco, String cpf, String statusProf) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        this.senha = senha;
+        this.certificado = certificado;
+        this.endereco = endereco;
+        this.cpf = cpf;
+        this.statusProf = statusProf;
+    }
+
+    public CadProfessor(String nome, String email, String senha, byte[] certificado, String endereco, String cpf, String statusProf) {
+        this.nome = nome;
+        this.email = email;
+        this.senha = senha;
+        this.certificado = certificado;
+        this.endereco = endereco;
+        this.cpf = cpf;
+        this.statusProf = statusProf;
+    }
+
+    public CadProfessor() {
+
+    }
+
+    public CadProfessor(Long id, String nome) {
+        this.id = id;
+        this.nome = nome;
+    }
 
     public Long getId() {
         return id;
@@ -38,12 +61,52 @@ public class CadProfessor {
         this.id = id;
     }
 
-    public String getCPF() {
-        return CPF;
+    public String getNome() {
+        return nome;
     }
 
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public byte[] getCertificado() {
+        return certificado;
+    }
+
+    public void setCertificado(byte[] certificado) {
+        this.certificado = certificado;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getStatusProf() {
@@ -52,45 +115,5 @@ public class CadProfessor {
 
     public void setStatusProf(String statusProf) {
         this.statusProf = statusProf;
-    }
-
-    public String getEndereco() {
-        return Endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        Endereco = endereco;
-    }
-
-    public byte[] getCertificado() {
-        return Certificado;
-    }
-
-    public void setCertificado(byte[] certificado) {
-        Certificado = certificado;
-    }
-
-    public String getSenha() {
-        return Senha;
-    }
-
-    public void setSenha(String senha) {
-        Senha = senha;
-    }
-
-    public String getEmail() {
-        return Email;
-    }
-
-    public void setEmail(String email) {
-        Email = email;
-    }
-
-    public String getNome() {
-        return Nome;
-    }
-
-    public void setNome(String nome) {
-        Nome = nome;
     }
 }

@@ -27,7 +27,7 @@ public class CadProfessorController {
                 .body(cadProfessorService.findAll());
     }
     @PutMapping
-    public ResponseEntity<Object> upadateCadProfessor(@RequestBody CadProfessor cadProfessor) {
+    public ResponseEntity<Object> updateCadProfessor(@RequestBody CadProfessor cadProfessor) {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(cadProfessorService.update(cadProfessor));
     }

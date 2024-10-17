@@ -11,9 +11,6 @@ import jakarta.persistence.Table;
 @Table(name="Produto")
 public class Produto {
 
-	Produto(){
-
-	}
 	public Produto(long id, String nome){
 		this.id = id;
 		this.nome = nome;
@@ -31,6 +28,10 @@ public class Produto {
 	private String categoria;
 	private String destaque;
 	private String statusProd;
+
+	public Produto() {
+
+	}
 
 
 	// CRIAR GETTERS E SETTERS
